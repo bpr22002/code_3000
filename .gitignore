@@ -3,6 +3,8 @@ setup_env.py
 .DS_Store# Virtual environment
 venv/
 
+venv_working/
+
 # Python cache
 __pycache__/
 *.pyc
