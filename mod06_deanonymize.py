@@ -26,7 +26,9 @@ def link_records(anon_df, aux_df):
     unique_ids = counts[counts == 1].index
     unique = matches[matches["anon_id"].isin(unique_ids)]
     
-    return unique[["anon_id", "name"]]
+    unique = unique[["anon_id", "name"]]
+    unique = unique.rename(columns={"name": "matched_name"})
+    return unique
 
 
 def deanonymization_rate(matches_df, anon_df):
